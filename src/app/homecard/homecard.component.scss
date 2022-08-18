@@ -1,0 +1,46 @@
+@import "../../../styles.scss";
+
+.card-top-space{
+    height: 20px;
+}
+
+.cards-parent{
+    display: flex;   
+    flex-wrap: wrap; 
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card-items-body{
+    margin: 10px;
+    width: 350px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.description-text{
+    margin: 12px;
+    margin-left: 20px;
+    margin-top: 16px;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+.user-avatar{
+    // vertical-align: middle;
+    width: 90px;
+    height: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: red;
+    // background-color: $primary-g;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+

@@ -1,0 +1,46 @@
+    @import "../../../styles.scss" ;
+
+    .main-body{
+        width: 100vw;
+        height: 100vh;
+        /* background-color: #363636; */
+        /* background-color: #292929; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center-card-width{
+        width: 350px;
+        height: 350px;
+        background-color: primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .circle-head{
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        /* margin: 25px; */
+    }
+
+    .title-main{
+        font-size: 23px;
+        color: gray;
+        font-weight: 600;
+        margin: 12px;
+    }
+
+    .sub-title{
+        font-size: 15px;
+        color: grey;
+        font-weight: 300;
+        /* box-shadow: ; */
+    }
+
+    .space-top{
+        margin-top: 30px;
+    }
+
