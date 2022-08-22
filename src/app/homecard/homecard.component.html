@@ -1,21 +1,45 @@
-<div class="container-sm p-2">
-    <div class="card-top-space"></div>
-    <div class="card-top-space"></div>
-    <div class="card-top-space"></div>
-    
-    <div class="card border-0 shadow-lg">
-        <div class="text-primary description-text">Quick Access</div>
-        <div class="cards-parent">
-            <div *ngFor="let name of quickAccessItems; let i=index" [attr.data-index]="i">
-            <div class="card-items-body">
-                <div class="user-avatar">{{i}} {{name.msg}}</div>  
-                <div style="height: 25px;"></div>  
-                <div class="text-primary fw-bolder">Item Name and description</div>    
+<div>
+    <div class="container-sm p-2">
+        <div class="card-top-space"></div>
+        <div class="card-top-space"></div>
+        <div class="card-top-space"></div>
+
+        <div class="card border-0 shadow-lg">
+            <div class="text-primary description-text">
+                <div >Quick Access</div>
+                <div data-bs-toggle="modal" data-bs-target="#new-note-label">
+                    <button type="button" class="btn btn-link text-primary">
+                        New Note
+                        <i class="bi bi-file-earmark-plus"
+                            style="margin: 10px; color: rgba(158, 157, 157, 0.906); font-size: 21px; cursor: pointer;"></i>
+                    </button>
+                </div>
             </div>
+            <div class="cards-parent">
+                <div *ngFor="let item of quickAccessItems; let i=index" [attr.data-index]="i">
+                    <div class="card-items-body">
+                        <div (click)="goToNoteContent()" class="edit-container">
+                            <i class="bi bi-pencil-fill"
+                                style="margin: 10px; color: rgba(158, 157, 157, 0.906); font-size: 21px; cursor: pointer;"></i>
+                        </div>
+                        <div class="avatar-and-text">
+                            <!-- <div class="user-avatar">{{i}} {{name.msg}}</div> -->
+                            <div class="user-avatar">{{i}}</div>
+                            <div style="height: 25px;"></div>
+                            <div class="fw-bolder item-label-style">{{item.name}}</div>
+                        </div>
+                        <div style="height: 10px;"></div>
+
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="card-top-space"></div>
+        <div class="card-top-space"></div>
+        <div class="card-top-space"></div>
     </div>
-    <div class="card-top-space"></div>
-    <div class="card-top-space"></div>
-    <div class="card-top-space"></div>    
+
+    <!-- <add-newtask></add-newtask> -->
+    <app-newnote></app-newnote>
+
 </div>

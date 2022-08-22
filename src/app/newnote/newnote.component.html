@@ -1,0 +1,39 @@
+
+    <!-- Modal -->
+    <div class="modal fade" id="new-note-label" tabindex="-1" aria-labelledby="new-note-labelLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary" id="new-note-labelLabel">New Note</h5>
+                    <button type="button color-red" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div style="height: 30px;"></div>
+
+                     <!-- TODO tile  -->
+                     <div class="form-group">
+                        <input type="text" class="form-control"placeholder="Title">
+                      </div>     
+                      
+                      <div style="height: 30px;"></div>
+                     <!-- TODO tile  -->
+                     <div class="form-group">
+                        <textarea class="form-control" placeholder="Task"></textarea>
+                      </div>                     
+                      <div style="height: 10px;"></div>
+
+                    <!-- Check Item As Completed -->
+                    <div class="form-group form-check flex-to-width-end">
+                        <label class="form-check-label" for="exampleCheck1">Completed</label>
+                        <div style="width: 25px; height: 10p;"></div>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                      </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary text-light">Save Item</button>
+                </div>
+            </div>
+        </div>
+    </div>

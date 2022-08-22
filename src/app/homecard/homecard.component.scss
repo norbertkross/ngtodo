@@ -7,22 +7,25 @@
 .cards-parent{
     display: flex;   
     flex-wrap: wrap; 
-    justify-content: space-around;
+    justify-content: space-between;
+    // align-items:start;
     padding: 20px;
 }
 
 .card-items-body{
-    margin: 10px;
+    margin: 30px 10px;
     width: 350px;
     height: 250px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: start;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .description-text{
+    display: flex;
+    justify-content: space-between;
     margin: 12px;
     margin-left: 20px;
     margin-top: 16px;
@@ -44,3 +47,26 @@
     align-items: center;
   }
 
+  .edit-container{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .avatar-and-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .flex-to-width-end{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+  }
+
+  .item-label-style{
+    color: rgba(137, 137, 137, 0.943) !important;
+  }

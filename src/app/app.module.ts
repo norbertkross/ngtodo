@@ -8,10 +8,14 @@ import { FrontHomeComponent } from './front-home/front-home.component';
 import { HomepageComponent } from './homepage/homepage.component'
 import { RouterModule, Routes } from '@angular/router';
 import { HomecardComponent } from './homecard/homecard.component';
+import { AddNewtaskComponent } from './add-newtask/add-newtask.component';
+import { NoteContentComponent } from './note-content/note-content.component';
+import { NewnoteComponent } from './newnote/newnote.component';
 
 const appRoutes: Routes = [
   {path: "",component:FrontHomeComponent},
   {path: "home",component:HomepageComponent},
+  {path: "note/:name/:id",component:NoteContentComponent},
 ];
 
 @NgModule({
@@ -19,7 +23,10 @@ const appRoutes: Routes = [
     AppComponent,
     FrontHomeComponent,
     HomepageComponent,
-    HomecardComponent
+    HomecardComponent,
+    AddNewtaskComponent,
+    NoteContentComponent,
+    NewnoteComponent
   ],
   imports: [
     BrowserModule,

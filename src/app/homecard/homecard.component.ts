@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+import { AllNotes } from 'src/modules_and_interfaces/allNotesInterface';
+import { DataStateService } from '../../_services/data-state.service';
 
 @Component({
   selector: 'app-homecard',
@@ -7,23 +10,31 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomecardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,private stateStore:DataStateService ) { }
 
   ngOnInit(): void {
   }
 
-  quickAccessItems: CardItem[] = [
-    {"msg":"Hello","description":"description goes here"},
-    {"msg":"Hello","description":"Goes here"},
-    {"msg":"Hello","description":"description here"},
-    {"msg":"Hello","description":"Goes erfre here"},
-  ]
+  quickAccessItems: AllNotes[] = this.stateStore.allNotes;
+  // quickAccessItems: CardItem[] = [
+  //   {"msg":"Hello","description":"description goes here"},
+  //   {"msg":"Hello","description":"Goes here"},
+  //   {"msg":"Hello","description":"description here"},
+  //   {"msg":"Hello","description":"Goes erfre here"},
+  // ]
+
+  goToNoteContent(){
+    console.log("Going To Details");
+    // this.router.navigate(["/home"])
+    this.router.navigate(["/note","my note name","3535"])
+    
+  }
 
 }
 
 
 
-export interface CardItem{
-  msg:string,
-  description:string
-}
+// export interface CardItem{
+//   msg:string,
+//   description:string
+// }

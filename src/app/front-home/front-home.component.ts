@@ -8,7 +8,9 @@ import { Router } from '@angular/router';
 })
 export class FrontHomeComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router) { 
+    console.log("logging from CONSTRUCTOR, Helloooo");    
+  }
 
   ngOnInit(): void {
   }
