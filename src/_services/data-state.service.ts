@@ -12,7 +12,6 @@ export class DataStateService {
   // Hold Data for any route a user   
   noteContentRouteDetails: {} = {};
 
-
   setNoteRouteDetails(value:{}){
     this.noteContentRouteDetails = value;
   }   
