@@ -1,0 +1,30 @@
+
+    .base-parent-head{
+        position: relative;
+        width: 100vw;
+        height: 220px;
+        background-color: theme("colors.primary");
+        background-image: url("../../assets/p1.jpg");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .middle-layer{    
+        position: absolute;
+        width: 100vw;
+        height: 220px;
+        // background-color: theme('colors.primary'); /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom right, #0ed145, rgba(4, 43, 217, 0.273)); 
+    } 
+    
+    .head-label{ 
+        display: flex;
+        width: 100vw;
+        height: 220px;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        font-size: x-large;
+        position: absolute;    
+        color: theme('colors.light');
+    }

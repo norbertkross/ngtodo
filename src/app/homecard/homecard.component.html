@@ -6,10 +6,10 @@
 
         <div class="card border-0 shadow-lg">
             <div class="text-primary description-text">
-                <div >Quick Access</div>
+                <div>Quick Access</div>
                 <div data-bs-toggle="modal" data-bs-target="#new-note-label">
                     <button type="button" class="btn btn-link text-primary">
-                        New Note
+                        New Note 
                         <i class="bi bi-file-earmark-plus"
                             style="margin: 10px; color: rgba(158, 157, 157, 0.906); font-size: 21px; cursor: pointer;"></i>
                     </button>
@@ -19,6 +19,7 @@
                 <div *ngFor="let item of quickAccessItems; let i=index" [attr.data-index]="i">
                     <div class="card-items-body">
                         <div (click)="goToNoteContent()" class="edit-container">
+                            <div class="item-label-style" style="margin: 24px; color: rgba(158, 157, 157, 0.906); font-size: 10px; font-weight: 300;">{{item.createdAt.substring(0,22)}}</div>
                             <i class="bi bi-pencil-fill"
                                 style="margin: 10px; color: rgba(158, 157, 157, 0.906); font-size: 21px; cursor: pointer;"></i>
                         </div>

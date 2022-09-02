@@ -11,6 +11,7 @@ import { HomecardComponent } from './homecard/homecard.component';
 import { AddNewtaskComponent } from './add-newtask/add-newtask.component';
 import { NoteContentComponent } from './note-content/note-content.component';
 import { NewnoteComponent } from './newnote/newnote.component';
+import { ContentCardComponent } from './note-content/content-card/content-card.component';
 
 const appRoutes: Routes = [
   {path: "",component:FrontHomeComponent},
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     HomecardComponent,
     AddNewtaskComponent,
     NoteContentComponent,
-    NewnoteComponent
+    NewnoteComponent,
+    ContentCardComponent
   ],
   imports: [
     BrowserModule,
