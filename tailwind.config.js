@@ -15,7 +15,6 @@ module.exports = {
       light:      "#F8F9FA",
       dark:       "#212529" ,
       thirdgray:"#b0b0b0",
-      vdreen:"#cc2020",
       transparent: 'transparent',
     }
   },

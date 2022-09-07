@@ -12,6 +12,9 @@ import { AddNewtaskComponent } from './add-newtask/add-newtask.component';
 import { NoteContentComponent } from './note-content/note-content.component';
 import { NewnoteComponent } from './newnote/newnote.component';
 import { ContentCardComponent } from './note-content/content-card/content-card.component';
+import { NgxJdenticonModule, JDENTICON_CONFIG } from 'ngx-jdenticon';
+// import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
 
 const appRoutes: Routes = [
   {path: "",component:FrontHomeComponent},
@@ -34,9 +37,27 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    NgxJdenticonModule,
+    // ReactiveFormsModule,
+    // FormsModule
   ],
-  providers: [],
+  providers: [    { 
+    // Custom identicon style
+    // https://jdenticon.com/icon-designer.html
+    provide: JDENTICON_CONFIG,
+    useValue: {
+      lightness: {
+        color: [0.40, 0.80],
+        grayscale: [0.30, 0.90],
+      },
+      saturation: {
+        color: 0.50,
+        grayscale: 0.00,
+      },
+      backColor: '#0000',
+    },
+  },],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,5 @@
 <div class="max-container">
-    <div>
+    <div class="todo-column">
         <div class="my-container">
             <div style="height: 30px;"></div>
             <div class="item-holder">
@@ -10,30 +10,48 @@
                 </div>
             </div>
         </div>
-        <div class="my-container">
-            <div class="body-of-list">
-                <div class="bullet-body">
-                    <div class="bullet"></div>
-                    <div>Website Toto</div>
-                    <i class="bi bi-trash" style="font-weight: bold;"></i>
-                </div>
-                <div style="height: 60px;"></div>
-                <div class="bullet-body">
-                    <div class="bullet"></div>
-                    <div>Website Toto</div>
-                    <i class="bi bi-trash" style="font-weight: bold;"></i>
+        <div class="body-of-list">
+            <div *ngFor="let item of state.inTodoListItems; let i=index" [attr.data-index]="i" >
+                <div class="bullet-body-parent" (mouseleave)="mouseLeft()" (mouseenter)="userHoverOnTodoItem(i)">
+                    <div class="bullet-body">
+                        <div class="bullet"></div>
+                        <div style="width: 8px;"></div>
+                        <div class="item">{{item.text}}</div>
+                    </div>
+                        <div *ngIf="mouseEnterRegion === i; else notrash">
+                            <div *ngIf="showOptionsForIndex === false; else confirmoption">
+                                <i (click)="setOptions(true)" class="bi bi-trash" style="font-weight: bold; color: tomato;font-size: 25px;"></i>
+                            </div>
+                            <ng-template #confirmoption >
+                                <div style="display: flex;">
+                                    <div style="background-color: rgba(223, 23, 23, 0.605);font-size: 20px;color: white; height: 30px;width: 30px;display: grid;place-items: center;">
+                                        <i class="bi bi-check2"></i>
+                                    </div>
+                                    <div style="background-color: rgba(0, 252, 46, 0.469);font-size: 20px;color: white; height: 30px;width: 30px;display: grid;place-items: center;">
+                                        <i class="bi bi-x"></i>
+                                    </div>
+                                </div>
+                            </ng-template>
+                        </div>
+                         <ng-template #notrash>
+                            <div style="height: 30px;width: 30;"></div>
+                         </ng-template>
+                    
                 </div>
             </div>
-        </div>
-    </div>
+            <div style="height: 10px;"></div>
+            <div class="input-and-checked" *ngIf="showInputField === true else notextinput">
+                <textarea class="todo-input" #textInput type="text" style="width: 100%;border-radius: 8px;"></textarea>
+                <i class="bi bi-patch-plus-fill"></i>
+            </div>
+            <ng-template #notextinput></ng-template>
+            <div style="height: 10px;"></div>
 
-    <div class="my-container">
-        <div style="height: 30px;"></div>
-        <div class="item-holder">
-            <div class="smaller-head">
-                <i class="bi bi-menu-button-wide-fill"></i>
-                hf
-                <i class="bi bi-menu-button-wide-fill"></i>
+            <div class="layered-button" (click)="switchTextInputState()">
+                <div class="btn btn-primary text-light button-radius justify-center">
+                    <i class="bi bi-plus color-light" style="font-weight: bold;font-size: large;"></i>
+                    <div style="padding-left:8px;" > New Task </div>
+                </div>                
             </div>
         </div>
     </div>

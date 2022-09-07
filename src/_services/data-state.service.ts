@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AllNotes } from 'src/modules_and_interfaces/allNotesInterface';
+import { InTODOlist } from 'src/modules_and_interfaces/inTODOlist';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,12 @@ export class DataStateService {
 
   newNoteTitle?:HTMLInputElement;
   newNoteDescription?:HTMLTextAreaElement;
+
+  inTodoListItems?: InTODOlist[] = [
+    {done:false,text:"Hello der!",time_added: new Date()},
+    {done:false,text:"how are you",time_added: new Date()},
+    {done:false,text:"doing today of all",time_added: new Date()},
+  ];
 
 
 
